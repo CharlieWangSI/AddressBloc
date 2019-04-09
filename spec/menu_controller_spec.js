@@ -4,10 +4,9 @@ describe("MenuController", () => {
   beforeEach(() => {
       this.menu = new MenuController();
     });
-
+// #2
   describe("#getContactCount()", () => {
 
-// #2
     it("should return 0 when no contacts are in the book", () => {
       expect(this.menu.getContactCount()).toBe(0);
     });
@@ -16,5 +15,13 @@ describe("MenuController", () => {
       this.menu.contacts.push("Bob");
       expect(this.menu.getContactCount()).toBe(1)
     });
+  });
+// #3
+  describe("remindMe", () => {
+
+    it("should return corrent reminder", () => {
+      expect(this.menu.remindMe()).toBe("Learning is a life-long pursuit");
+    });
+
   });
 });
